@@ -44,7 +44,7 @@ public class PedidoController {
 
 
         @PutMapping("/pago")
-        public ResponseEntity<Void> aprovaPagamento(@RequestBody @Valid AlterarAprovarPagamento dto) {
+        public ResponseEntity<Void> aprovaPagamento(@RequestBody @Valid AlterarAprovarPagamentoDto dto) {
             service.aprovaPagamentoPedido(dto);
             return ResponseEntity.ok().build();
         }

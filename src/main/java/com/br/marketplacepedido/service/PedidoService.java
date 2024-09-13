@@ -48,7 +48,7 @@ public class PedidoService {
         repository.save(pedido);
     }
 
-    public void aprovaPagamentoPedido(AlterarAprovarPagamento dto) {
+    public void aprovaPagamentoPedido(AlterarAprovarPagamentoDto dto) {
         var pedido = repository.findById(dto.id())
                 .orElseThrow(() -> new ValidacaoException("Pedido não encontrado."));
 
